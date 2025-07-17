@@ -1,7 +1,7 @@
 // Global Variables
 let currentSection = 'fortune';
 
-// Fortune Generator Variables
+// for Fortune Generator Variables
 const fortunes = [
     "True wisdom comes not from knowledge, but from understanding.",
     "The journey of a thousand miles begins with a single step.",
@@ -28,7 +28,7 @@ let currentBgColorIndex = 0;
 let currentBorderColorIndex = 0;
 let currentFontStyleIndex = 0;
 
-// Stopwatch Variables
+// for Stopwatch Variables
 let currentTime = 0;
 let timerInterval = null;
 let isRunning = false;
@@ -36,7 +36,7 @@ let isFinished = false;
 const MAX_TIME = 30;
 const INTERVAL = 3;
 
-// To-Do List Variables
+// for To-Do List Variables
 let tasks = [];
 let taskIdCounter = 1;
 
