@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 02</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">Assignment 02</h1>
+            <div class="nav-links">
+                <button onclick="showSection('fortune')" class="nav-btn active" id="fortuneNav">Fortune Generator</button>
+                <button onclick="showSection('stopwatch')" class="nav-btn" id="stopwatchNav">Stopwatch</button>
+                <button onclick="showSection('todo')" class="nav-btn" id="todoNav">To-Do List</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Fortune Generator Section -->
+    <section id="fortuneSection" class="section active">
+        <div class="container">
+            <h2 class="section-title">Fortune Generator</h2>
+
+            <!-- Fortune Generator -->
+            <div class="fortune-container">
+                <div id="fortuneBox" class="fortune-box">
+                    <p id="fortuneText">Loading your fortune...</p>
+                </div>
+                
+                <div class="control-buttons">
+                    <button class="font-color-btn" onclick="changeFontColor()">Change Font Color</button>
+                    <button class="bg-color-btn" onclick="changeBackgroundColor()">Change Background</button>
+                    <button class="border-color-btn" onclick="changeBorderColor()">Change Border</button>
+                    <button class="font-style-btn" onclick="changeFontStyle()">Change Font Style</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stopwatch Section -->
+    <section id="stopwatchSection" class="section">
+        <div class="container">
+            <h2 class="section-title">Stopwatch - 3 Second Intervals</h2>
+            
+            <div class="stopwatch-container">
+                <div id="timerDisplay" class="timer-display">00</div>
+                
+                <div class="controls">
+                    <button id="startBtn" class="control-btn start-btn" onclick="startTimer()">Start</button>
+                    <button id="stopBtn" class="control-btn stop-btn" onclick="stopTimer()">Stop</button>
+                    <button id="resetBtn" class="control-btn reset-btn" onclick="resetTimer()">Reset</button>
+                </div>
+                
+                <div id="status" class="status">Ready to start</div>
+                
+                <div class="info">
+                    <p><strong>Instructions:</strong></p>
+                    <p>• Timer counts in 3-second intervals</p>
+                    <p>• Automatically stops at 30 seconds</p>
+                    <p>• Use Stop to pause, Start to resume</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- To-Do List Section -->
+    <section id="todoSection" class="section">
+        <div class="container">
+            <h2 class="section-title">My To-Do List</h2>
+            
+            <div class="input-section">
+                <input type="text" id="taskInput" placeholder="Enter a new task..." maxlength="100">
+                <button id="addBtn" onclick="addTask()">Add Task</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalTasks">0</div>
+                    <div>Total Tasks</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="completedTasks">0</div>
+                    <div>Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="pendingTasks">0</div>
+                    <div>Pending</div>
+                </div>
+            </div>
+
+            <ul id="todoList"></ul>
+
+            <div class="clear-completed">
+                <button onclick="clearCompleted()">Clear Completed Tasks</button>
+            </div>
+
+            <div class="footer-info">
+                <p><strong>Features:</strong> Add tasks, mark as complete, delete tasks, and data persists between sessions!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>&copy; Assignment02 - CSE 391</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
